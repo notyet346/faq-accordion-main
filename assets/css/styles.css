@@ -1,0 +1,108 @@
+/*************
+  Reset
+*************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+  background-color: hsl(275, 100%, 97%);
+}
+
+/*************
+  Layout
+*************/
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: url("../images/background-pattern-mobile.svg");
+  background-position: top;
+  background-repeat: no-repeat; 
+  background-size:;
+}
+
+.faq {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.faq-title {
+		display: flex;
+		gap: 1.5rem;
+		margin-bottom: 1rem; 
+}
+
+/*************
+  Accordion
+*************/
+.faq-title-h1 {
+  font-family: 'Lucida Sans', sans-serif;
+  font-weight: 900;
+  color: hsl(292, 42%, 14%);
+}
+
+.faq-item {
+  border-bottom: 1px solid hsl(292, 16%, 49%);
+  padding: 1rem 0;
+}
+
+.faq-item:last-of-type {
+  border-bottom: none;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  color: hsl(292, 42%, 14%);
+}
+
+summary::-webkit-details-marker {
+  display: none; /* remove default marker */
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  display: none;
+}
+.faq-title .icon {
+    display: inline-block;
+}
+.plus { display: inline; }
+.minus { display: none; }
+
+details[open] .plus { display: none; }
+details[open] .minus { display: inline; }
+
+.faq-item p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: hsl(292, 16%, 49%);
+  line-height: 1.4;
+}
